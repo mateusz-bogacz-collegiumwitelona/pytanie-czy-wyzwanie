@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1699216905 source:d:\projekt\pyt_czy_wyzw_cpp\main.cpp
+	"Quest.h"
+	"Quest.cpp"
+
+1699216905 d:\projekt\pyt_czy_wyzw_cpp\quest.h
+	<vector>
+	<string>
+
+1699216905 d:\projekt\pyt_czy_wyzw_cpp\quest.cpp
+	"Quest.h"
+	<iostream>
+	<windows.h>
+	<string>
+	<vector>
+	<ctime>
+	<fstream>
+

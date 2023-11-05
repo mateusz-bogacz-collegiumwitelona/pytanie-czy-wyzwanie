@@ -1,0 +1,98 @@
+\doxysection{Quest.\+cpp}
+\hypertarget{_quest_8cpp_source}{}\label{_quest_8cpp_source}\mbox{\hyperlink{_quest_8cpp}{Id≈∫ do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_quest_8h}{Quest.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ Quest::choice\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_a95d5ef34ced01e22c136736c492d136d}{Quest::Console}}()\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ std::fflush(stdin);}
+\DoxyCodeLine{00025\ \ \ \ \ std::fflush(stdout);}
+\DoxyCodeLine{00026\ \ \ \ \ SetConsoleOutputCP(CP\_UTF8);}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_ac3dded20bde3b54e703fa06e396f8ff9}{Quest::Welcome}}()\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Witaj\ w\ tej\ prostej\ grze.\ :)"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00036\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Gra\ jest\ doúÊ prosta.\ Wybierasz\ czy\ chcesz\ prawdÍ czy\ wyzwanie."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00037\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}1.\ Prawda\(\backslash\)n2.\ Wyzwanie\(\backslash\)n3.\ Wyjúcie\(\backslash\)n"{}};}
+\DoxyCodeLine{00038\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}TwÛj wybÛr to:\ "{}};}
+\DoxyCodeLine{00039\ \ \ \ \ std::cin\ >>\ choice;}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_acf79368df8b9d53a4bb4293ecf8ca04b}{Quest::Random}}()\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ std::srand(std::time(NULL));}
+\DoxyCodeLine{00047\ \ \ \ \ random\ =\ std::rand()\ \%\ 20\ +\ 1;}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_a5ff3b259d24fe32106b865aebcac9641}{Quest::Menu}}()\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{while}\ (choice\ !=\ 3)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_a8d8563fb97a7fa8b0fd99e818cc0d178}{Question}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_affc4396a42bd5369f3d57880a1da154c}{Task}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_quest_a3a646f6b1305d95bdafed6e9b3dedfcd}{Bad\_End}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_quest_a17ffdd45d980fc814016cd1a316624c4}{Exit}}();}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_a8d8563fb97a7fa8b0fd99e818cc0d178}{Quest::Question}}()\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_quest_acf79368df8b9d53a4bb4293ecf8ca04b}{Random}}();}
+\DoxyCodeLine{00079\ \ \ \ \ choice\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ std::ifstream\ questionFile(\textcolor{stringliteral}{"{}question.txt"{}});}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(questionFile,\ line))\ question.push\_back(line);}
+\DoxyCodeLine{00082\ \ \ \ \ questionFile.close();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Pytanie:\(\backslash\)n"{}}\ <<\ question[random]\ <<\ std::endl;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ std::system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_quest_ac3dded20bde3b54e703fa06e396f8ff9}{Welcome}}();}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_affc4396a42bd5369f3d57880a1da154c}{Quest::Task}}()\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_quest_acf79368df8b9d53a4bb4293ecf8ca04b}{Random}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ std::ifstream\ taskFile(\textcolor{stringliteral}{"{}task.txt"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(taskFile,\ line))\ task.push\_back(line);}
+\DoxyCodeLine{00099\ \ \ \ \ taskFile.close();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Wyzwanie:\(\backslash\)n"{}}\ <<\ task[random]\ <<\ std::endl;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_quest_ac3dded20bde3b54e703fa06e396f8ff9}{Welcome}}();}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quest_a3a646f6b1305d95bdafed6e9b3dedfcd}{Quest::Bad\_End}}()\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ std::system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00112\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Dokona≥eú\ z≥ego\ wyboru"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00113\ \ \ \ \ std::system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_quest_ac3dded20bde3b54e703fa06e396f8ff9}{Welcome}}();}
+\DoxyCodeLine{00115\ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_quest_a17ffdd45d980fc814016cd1a316624c4}{Quest::Exit}}()\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ std::system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00124\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Zapraszamy\ ponownie\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{00125\ \ \ \ \ std::system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}

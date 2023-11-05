@@ -1,0 +1,7 @@
+<map id="Quest::Task" name="Quest::Task">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,98,57"/>
+<area shape="rect" id="Node000002" href="$class_quest.html#acf79368df8b9d53a4bb4293ecf8ca04b" title=" " alt="" coords="149,5,262,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,34,133,28,134,33,99,39"/>
+<area shape="rect" id="Node000003" href="$class_quest.html#ac3dded20bde3b54e703fa06e396f8ff9" title=" " alt="" coords="146,56,265,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="99,49,131,54,130,60,98,54"/>
+</map>

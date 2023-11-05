@@ -1,0 +1,76 @@
+.TH "Quest" 3 "Pytanie czy Wyzwanie" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Quest
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Quest\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBRandom\fP ()"
+.br
+.ti -1c
+.RI "void \fBMenu\fP ()"
+.br
+.ti -1c
+.RI "void \fBTask\fP ()"
+.br
+.ti -1c
+.RI "void \fBQuestion\fP ()"
+.br
+.ti -1c
+.RI "void \fBBad_End\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBConsole\fP ()"
+.br
+.ti -1c
+.RI "static void \fBWelcome\fP ()"
+.br
+.ti -1c
+.RI "static int \fBExit\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Klasa reprezentuj¹ca prost¹ grê typu 'Prawda czy Wyzwanie'\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Quest::Bad_End ()"
+Funkcja obs³uguj¹ca sytuacjê, gdy gracz dokona z³ego wyboru\&. 
+.SS "void Quest::Console ()\fC [static]\fP"
+Funkcja ustawiaj¹ca konsolê na obs³ugê znaków UTF-8\&. 
+.SS "int Quest::Exit ()\fC [static]\fP"
+Funkcja wyœwietlaj¹ca komunikat koñcz¹cy grê\&.
+.PP
+Funkcja wyœwietlaj¹ca komunikat koñcz¹cy grê\&.
+.PP
+\fBReturns\fP
+.RS 4
+Zawsze zwraca 0\&. 
+.RE
+.PP
+
+.SS "void Quest::Menu ()"
+G³ówna pêtla gry obs³uguj¹ca wybory gracza\&. 
+.SS "void Quest::Question ()"
+Funkcja obs³uguj¹ca wybór 'Prawda' przez gracza\&. 
+.SS "void Quest::Random ()"
+Funkcja generuj¹ca losow¹ liczbê do póŸniejszego wykorzystania\&. 
+.SS "void Quest::Task ()"
+Funkcja obs³uguj¹ca wybór 'Wyzwanie' przez gracza\&. 
+.SS "void Quest::Welcome ()\fC [static]\fP"
+Funkcja wyœwietlaj¹ca powitanie i menu gry\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Pytanie czy Wyzwanie from the source code\&.
