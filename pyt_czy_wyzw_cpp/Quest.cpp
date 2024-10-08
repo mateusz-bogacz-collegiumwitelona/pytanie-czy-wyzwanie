@@ -1,9 +1,3 @@
-/**
- * @file Quest.cpp
- *
- * @brief Plik Ÿród³owy klasy Quest.
- */
-
 #include "Quest.h"
 #include <iostream>
 #include <windows.h>
@@ -12,44 +6,34 @@
 #include <ctime>
 #include <fstream>
 
-/**
- * Statyczne pole klasy `Quest` reprezentuj¹ce wybór gracza.
- */
+//Statyczne pole klasy `Quest` reprezentujÂ¹ce wybÃ³r gracza.
 int Quest::choice = 0;
 
-/**
- * Funkcja ustawiaj¹ca konsolê na obs³ugê znaków UTF-8.
- */
+//Funkcja ustawiajÂ¹ca konsolÃª na obsÂ³ugÃª znakÃ³w UTF-8.
 void Quest::Console() {
     std::fflush(stdin);
     std::fflush(stdout);
     SetConsoleOutputCP(CP_UTF8);
 }
 
-/**
- * Funkcja wyœwietlaj¹ca powitanie i menu gry.
- */
+//Funkcja wyÅ“wietlajÂ¹ca powitanie i menu gry.
 void Quest::Welcome() {
     system("cls");
 
     std::cout << "Witaj w tej prostej grze. :)" << std::endl;
-    std::cout << "Gra jest doœæ prosta. Wybierasz czy chcesz prawdê czy wyzwanie." << std::endl;
-    std::cout << "1. Prawda\n2. Wyzwanie\n3. Wyjœcie\n";
-    std::cout << "Twój wybór to: ";
+    std::cout << "Gra jest doÅ“Ã¦ prosta. Wybierasz czy chcesz prawdÃª czy wyzwanie." << std::endl;
+    std::cout << "1. Prawda\n2. Wyzwanie\n3. WyjÅ“cie\n";
+    std::cout << "TwÃ³j wybÃ³r to: ";
     std::cin >> choice;
 }
 
-/**
- * Funkcja generuj¹ca losow¹ liczbê do póŸniejszego wykorzystania.
- */
+//Funkcja generujÂ¹ca losowÂ¹ liczbÃª do pÃ³Å¸niejszego wykorzystania.
 void Quest::Random() {
     std::srand(std::time(NULL));
     random = std::rand() % 20 + 1;
 }
 
-/**
- * G³ówna pêtla gry obs³uguj¹ca wybory gracza.
- */
+//GÂ³Ã³wna pÃªtla gry obsÂ³ugujÂ¹ca wybory gracza.
 void Quest::Menu() {
     while (choice != 3) {
         system("cls");
@@ -70,9 +54,7 @@ void Quest::Menu() {
     Exit();
 }
 
-/**
- * Funkcja obs³uguj¹ca wybór "Prawda" przez gracza.
- */
+//Funkcja obsÂ³ugujÂ¹ca wybÃ³r "Prawda" przez gracza.
 void Quest::Question() {
     system("cls");
     Random();
@@ -87,9 +69,7 @@ void Quest::Question() {
     Welcome();
 }
 
-/**
- * Funkcja obs³uguj¹ca wybór "Wyzwanie" przez gracza.
- */
+//Funkcja obsÂ³ugujÂ¹ca wybÃ³r "Wyzwanie" przez gracza.
 void Quest::Task() {
     system("cls");
     Random();
@@ -104,21 +84,18 @@ void Quest::Task() {
     Welcome();
 }
 
-/**
- * Funkcja obs³uguj¹ca sytuacjê, gdy gracz dokona z³ego wyboru.
- */
+//Funkcja obsÂ³ugujÂ¹ca sytuacjÃª, gdy gracz dokona zÂ³ego wyboru.
 void Quest::Bad_End() {
     std::system("cls");
-    std::cout << "Dokona³eœ z³ego wyboru" << std::endl;
+    std::cout << "DokonaÂ³eÅ“ zÂ³ego wyboru" << std::endl;
     std::system("pause");
     Welcome();
 }
 
-/**
- * Funkcja wyœwietlaj¹ca komunikat koñcz¹cy grê.
- *
- * @return Zawsze zwraca 0.
- */
+/*
+    Funkcja wyÅ“wietlajÂ¹ca komunikat koÃ±czÂ¹cy grÃª.
+    return Zawsze zwraca 0.
+*/
 int Quest::Exit() {
     std::system("cls");
     std::cout << "Zapraszamy ponownie " << std::endl;
