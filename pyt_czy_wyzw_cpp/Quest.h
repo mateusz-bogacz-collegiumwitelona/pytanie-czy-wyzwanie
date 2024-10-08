@@ -1,35 +1,27 @@
-/**
- * @file Quest.h
- *
- * @brief Plik nag³ówkowy klasy Quest.
- */
-
 #ifndef QUEST_H
 #define QUEST_H
 
 #include <vector>
 #include <string>
 
-/**
- * Klasa reprezentuj¹ca prost¹ grê typu "Prawda czy Wyzwanie".
- */
+# Klasa reprezentujÄ…ca prostÄ… grÄ™ typu "Prawda czy Wyzwanie".
 class Quest {
 private:
-    static int choice;                   /**< Statyczne pole klasy reprezentuj¹ce wybór gracza. */
-    int random;                           /**< Pole przechowuj¹ce losow¹ liczbê. */
-    std::vector<std::string> question;   /**< Wektor przechowuj¹cy pytania. */
-    std::vector<std::string> task;       /**< Wektor przechowuj¹cy wyzwania. */
-    std::string line;                    /**< Pole przechowuj¹ce odczytane linie z plików. */
+    static int choice;                   // Statyczne pole klasy reprezentujÄ…ce wybÃ³r gracza. 
+    int random;                          // Pole przechowujÄ…ce losowÄ… liczbÄ™. 
+    std::vector<std::string> question;   // Wektor przechowujÄ…cy pytania. 
+    std::vector<std::string> task;       // Wektor przechowujÄ…cy wyzwania. 
+    std::string line;                    // Pole przechowujÄ…ce odczytane linie z plikÃ³w. 
 
 public:
-    static void Console();   /**< Funkcja ustawiaj¹ca konsolê na obs³ugê znaków UTF-8. */
-    static void Welcome();   /**< Funkcja wyœwietlaj¹ca powitanie i menu gry. */
-    void Random();           /**< Funkcja generuj¹ca losow¹ liczbê do póŸniejszego wykorzystania. */
-    void Menu();             /**< G³ówna pêtla gry obs³uguj¹ca wybory gracza. */
-    void Task();             /**< Funkcja obs³uguj¹ca wybór "Wyzwanie" przez gracza. */
-    void Question();         /**< Funkcja obs³uguj¹ca wybór "Prawda" przez gracza. */
-    void Bad_End();          /**< Funkcja obs³uguj¹ca sytuacjê, gdy gracz dokona z³ego wyboru. */
-    static int Exit();       /**< Funkcja wyœwietlaj¹ca komunikat koñcz¹cy grê. */
+    static void Console();   // Funkcja ustawiajÄ…ca konsolÄ™ na obsÅ‚ugÄ™ znakÃ³w UTF-8. */
+    static void Welcome();   // Funkcja wyÅ›wietlajÄ…ca powitanie i menu gry. */
+    void Random();           // Funkcja generujÄ…ca losowÄ… liczbÄ™ do pÃ³Åºniejszego wykorzystania. */
+    void Menu();             // GÅ‚Ã³wna pÄ™tla gry obsÅ‚ugujÄ…ca wybory gracza. */
+    void Task();             // Funkcja obsÅ‚ugujÄ…ca wybÃ³r "Wyzwanie" przez gracza. */
+    void Question();         // Funkcja obsÅ‚ugujÄ…ca wybÃ³r "Prawda" przez gracza. */
+    void Bad_End();          // Funkcja obsÅ‚ugujÄ…ca sytuacjÄ™, gdy gracz dokona zÅ‚ego wyboru. */
+    static int Exit();       // Funkcja wyÅ›wietlajÄ…ca komunikat koÅ„czÄ…cy grÄ™. */
 };
 
 #endif // QUEST_H
